@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .w-1\/5 {
+      width: 40px;
+    }
+    .w-1\/5 svg {
+      width: 30px;
+      height: 30px;
+    }
+    .nav-link {
+      margin: 10px 0;
+    }
+  }
+  
