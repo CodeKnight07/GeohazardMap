@@ -3,7 +3,7 @@ import LandingPage from './components/user/landing-page/landing-page'
 
 function Index() {
   return (
-    <div className='w-screen h-screen bg-slate-500'>
+    <div className='w-screen h-screen'>
         <LandingPage/>
     </div>
   )
