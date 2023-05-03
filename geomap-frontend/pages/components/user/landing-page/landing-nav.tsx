@@ -49,7 +49,7 @@ function LandingNav() {
     <nav className="fixed bg-gradient-to-br from-green-500 via-blue-400 to-purple-500">
       {isSmallDevice && (
         <div className=" w-screen h-16 flex flex-row justify-start items-center">
-          <div className=" w-3/5 h-full flex flex-row justify-center items-center">
+          <div className=" w-2/4 h-full flex flex-row justify-center items-center">
             <div>Company Name</div>
           </div>
           <div className=" w-36 h-auto flex flex-row justify-end items-start">
