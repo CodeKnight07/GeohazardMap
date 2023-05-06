@@ -11,6 +11,10 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'background1':'url(/pages/backgrounds/bg3.jpg)'
+      },
+      spacing:{
+        '85':'22rem',
       },
       colors:{
         'royal-blue': {
@@ -26,6 +30,7 @@ module.exports = {
           '900': '#263782',
           '950': '#1c244f',
       },
+      
       
       }
     },
