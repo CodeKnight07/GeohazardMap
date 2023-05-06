@@ -6,7 +6,7 @@ function TopNav() {
   return (
     <div className=" fixed top-0 left-0 right-0 w-full z-40 mx-auto bg-gradient-to-b from-cyan-600 to-teal-400 ">
       <nav className=" border-gray-200 dark:bg-gray-900">
-        <div className="flex flex-wrap justify-between items-center max-w-screen-xl py-2 px-4 ">
+        <div className="flex flex-wrap justify-between items-center mx-2 py-2 px-4 ">
           <div className="flex items-center space-x-2">
             <div className="max-[480px]:w-11 h-9 sm:w-12 sm:h-11 md:w-19  ">
                <Image src={logo} alt="My Image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} className="rounded-xl"/>
@@ -16,7 +16,7 @@ function TopNav() {
               Geohazard Map
             </span>
           </div>
-          <div className="flex flex-row justify-end items-center">
+          <div className="flex items-center">
             <a
               href="#"
               className="  hover:underline  text-white max-[480px]:text-base md:text-xl "
