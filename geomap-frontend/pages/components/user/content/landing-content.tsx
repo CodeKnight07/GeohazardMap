@@ -1,16 +1,17 @@
-import Image from 'next/image'
+
 import React from 'react'
-import hall from './images/hall.jpg'
+
+import HomePageLanding from './home-page-landing'
+import AboutLanding from './about-landing'
+import ContactLanding from './contact-landing'
+import FooterLanding from '../footer/footer-landing'
 function LandingContent() {
   return (
-   <div className=' w-full h-5/6 bg-white'>
-     <Image 
-     src={hall}
-     alt='hall image'
-     className='relative w-full h-full object-cover object-center opacity-90'
-    
-     />
-     <div className='w-screen h-screen'>About</div>
+   <div className='w-full h-screen bg-white '>
+      <HomePageLanding/>
+      <AboutLanding/>
+      <ContactLanding/>
+      <FooterLanding/>
    </div>
   )
 }
