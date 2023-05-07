@@ -56,14 +56,7 @@ function TopNav() {
                   Contact Us
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-900 dark:text-white hover:underline max-[480px]:text-sm sm:text-base "
-                >
-                  FAQs
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>
