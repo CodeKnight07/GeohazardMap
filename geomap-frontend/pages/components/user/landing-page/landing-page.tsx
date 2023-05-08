@@ -1,12 +1,18 @@
 import React from 'react'
-import LandingNav from './landing-nav'
-import SideNav from './sidenav'
+
+
+
+import LandingContent from '../content/landing-content'
+import TopNav from './landing-top-nav'
+
 
 function LandingPage() {
   return (
-    <div className='w-screen h-screen'>
-        <LandingNav/>
-        <SideNav/>
+    <div className=' overflow-x-hidden'>
+
+    <TopNav/>
+    <LandingContent/>
+
     </div>
   )
 }
