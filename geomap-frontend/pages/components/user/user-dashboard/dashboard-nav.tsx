@@ -3,6 +3,10 @@ import React from "react";
 import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaSignOutAlt, FaMapMarkedAlt, FaBook, FaHistory } from 'react-icons/fa';
 import {SlArrowDown} from 'react-icons/sl'
 import {MdPermContactCalendar} from 'react-icons/md'
+import {AiFillDashboard} from 'react-icons/ai'
+
+import logo from './images/logo.png'
+import Image from "next/image";
 function UserDashboardNav () {
   const [smallDevice, setSmallDevice] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -10,17 +14,14 @@ function UserDashboardNav () {
 
 
   const handleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
-  const handleScreen = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      setSmallDevice(true);
-      handleSidebar()
-      
-    } else {
-      setSmallDevice(false);
+    if (screenWidth <= 640){
+      setSmallDevice(true)
+      setShowSidebar(!showSidebar);
+    }
+    else {
+      setSmallDevice(false)
+      setShowSidebar(showSidebar)
     }
   };
 
@@ -31,10 +32,10 @@ function UserDashboardNav () {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleScreen);
-    handleScreen(); // Set initial value
+    window.addEventListener("resize", handleSidebar);
+    handleSidebar(); // Set initial value
     return () => {
-      window.removeEventListener("resize", handleScreen);
+      window.removeEventListener("resize", handleSidebar);
     };
   }, []);
 
@@ -54,7 +55,18 @@ function UserDashboardNav () {
         </div>
       ) : (
         <div className="fixed top-20 left-0 w-40 h-screen bg-slate-800 flex flex-col justify-start items-center">
-          <ul className="flex flex-col space-y-3">
+          <div className=" w-3/5 h-24 my-5">
+            <Image
+            src={logo}
+            alt=''
+            style={{objectFit:'cover',width:'100%', height:'100%', borderRadius:'100%'
+          }}
+            />
+
+          </div>
+          <div className="my-5"> <AiFillDashboard className="text-white font-semibold text-3xl"/></div>
+     
+          <ul className="flex flex-col space-y-5">
             <li className="text-white text-xl flex flex-row items-center space-x-2">
               <FaHome/>
               <a href="#" className="border-collapse hover:border-b-2 border-royal-blue-400 ">Home</a>
@@ -92,7 +104,7 @@ function UserDashboardNav () {
 
       {/* For small screen */}
       {showSidebar && (
-        <div className="fixed top-20 left-0 w-1/3 h-5/6 bg-slate-700 z-50 flex flex-col items-center">
+        <div className="fixed top-20 left-0 w-1/3 h-9/10 bg-slate-700 z-50 flex flex-col items-center">
           <button
             className="text-2xl absolute top-3 right-3"
             onClick={handleSidebar}
@@ -104,7 +116,7 @@ function UserDashboardNav () {
 
           </div>
           <ul className="mt-8 flex flex-col space-y-4">
-            <li className="text-lg text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaHome/><a href="#">Home</a></li>
+            <li className="text-md text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaHome/><a href="#">Home</a></li>
             <li>
               <div className="text-white flex items-center justify-between space-x-1">
               <FaMapMarkedAlt/>  <span className="text-lg pr-1 border-collapse hover:border-b border-royal-blue-400">Maps</span>
@@ -120,9 +132,9 @@ function UserDashboardNav () {
                 </ul>
               )}
             </li>
-            <li className="text-lg text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaHistory/><a href="#">History </a></li>
-            <li className="text-lg  text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><MdPermContactCalendar/><a href="#"> Contacts </a></li>
-            <li className="text-lg  text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaBook/><a href="#">Guidelines</a></li>
+            <li className="text-md text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaHistory/><a href="#">History </a></li>
+            <li className="text-md  text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><MdPermContactCalendar/><a href="#"> Contacts </a></li>
+            <li className="text-md  text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaBook/><a href="#">Guidelines</a></li>
           </ul>
         </div>
       )}
