@@ -17,7 +17,8 @@ function UserDashboardNav () {
     const screenWidth = window.innerWidth;
     if (screenWidth <= 640){
       setSmallDevice(true)
-      setShowSidebar(!showSidebar);
+      setShowSidebar(!showSidebar)
+      
     }
     else {
       setSmallDevice(false)
@@ -52,6 +53,7 @@ function UserDashboardNav () {
               <FaTimes />
             </button>
           )}
+           
         </div>
       ) : (
         <div className="fixed top-20 left-0 w-40 h-screen bg-slate-800 flex flex-col justify-start items-center">
