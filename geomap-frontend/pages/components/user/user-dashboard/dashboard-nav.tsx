@@ -121,7 +121,7 @@ function UserDashboardNav () {
             <li className="text-md text-white border-collapse hover:border-b border-royal-blue-400 flex flex-row items-center space-x-2"><FaHome/><a href="#">Home</a></li>
             <li>
               <div className="text-white flex items-center justify-between space-x-1">
-              <FaMapMarkedAlt/>  <span className="text-lg pr-1 border-collapse hover:border-b border-royal-blue-400">Maps</span>
+              <FaMapMarkedAlt/>  <span className="text-md pr-1 border-collapse hover:border-b border-royal-blue-400">Maps</span>
                
                   <SlArrowDown onClick={handleDropdown}/>
                 
