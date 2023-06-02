@@ -7,9 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize:{
+        'xxs':'0.625rem',
+        'xxxs':'0.5625rem'
+      },
       height:{
         '9/10':'90%',
-        '19/20':'95%'
+        '19/20':'95%',
+        '30vh':'30vh',
+        '40vh':'40vh',
+        '50vh':'50vh',
       },
       
       backgroundImage: {
