@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       height:{
-        '9/10':'90%'
+        '9/10':'90%',
+        '19/20':'95%'
       },
       
       backgroundImage: {
