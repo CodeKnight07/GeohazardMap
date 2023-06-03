@@ -7,9 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize:{
+        'xxs':'0.625rem',
+        'xxxs':'0.5625rem'
+      },
       height:{
         '9/10':'90%',
-        '19/20':'95%'
+        '19/20':'95%',
+        '30vh':'30vh',
+        '40vh':'40vh',
+        '50vh':'50vh',
       },
       
       backgroundImage: {
@@ -31,6 +38,10 @@ module.exports = {
           '800': '#293ca4',
           '900': '#263782',
           '950': '#1c244f',
+      },
+      gold: {
+        light: '#FFD700', // Gold
+        dark: '#B8860B',    // Dark goldenrod
       },
       
         primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"}
